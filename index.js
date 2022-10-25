@@ -140,10 +140,24 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 */  
 
 function hungryDog(ageYears, weightPounds){
-  if (ageYears >  )
-}
+  if (ageYears < .33) {
+    return .1 * weightPounds;
+   } else if (ageYears < .58) {
+      return .05 * weightPounds;
+   } else if (ageYears < 1) {
+      return .04 * weightPounds;
+   } else if (ageYears >= 1 && weightPounds > 15) {
+      return .02 * weightPounds;
+   }  else if (ageYears >= 1 && weightPounds >= 10.5) {
+      return .03 * weightPounds;
+   } else if (ageYears >= 1 && weightPounds >= 5.5) {
+      return .04 * weightPounds;
+   }  else if (ageYears >= 1 && weightPounds <= 5.4) {
+      return .05 * weightPounds;
+   } 
+  }
 
-console.log(hungryDog(1, 15)
+console.log(hungryDog(1, 15));
 
 
 
@@ -168,8 +182,16 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
+let robot = Math.random();
+
+if robot = 
+
 function game(user, computer){
-  /*add your code here*/
+  if (user === computer) {
+    return "Tie";
+  } else if (user === "Rock" && computer ==== Paper) {
+    return "You Win"
+  }
 }
 
 
@@ -185,10 +207,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * .621371;
 }
 
+console.log(miles(10));
 
 
 //Task 5b - Centimeters to Feet
@@ -199,11 +222,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm * 30.48;
 }
 
-
+console.log(feet(100));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -219,9 +242,17 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(numBottles){
+  return numBottles + " bottles of soda on the wall, " + numBottles + " bottles of soda, take one down pass it around " + numBottles + " bottles of soda on the wall";
 }
+
+console.log(annoyingSong(20));
+
+for (let i = 10; i > 0; i--){
+  console.log(annoyingSong(i));  
+  }
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -239,11 +270,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(myScore){
+  if (myScore >= 90) {
+    return 'you got an A'
+  } else if (myScore >= 80) {
+    return 'you got a B'
+  } else if (myScore >= 70) {
+    return 'you got a C'
+  } else if (myScore >= 60) {
+    return 'you got a D'
+  } else if (myScore < 60) {
+    return 'you got an F'
+  }
 }
 
-
+console.log(grade(95));
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
