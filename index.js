@@ -184,17 +184,34 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 let robot = Math.random();
 
-if robot = 
+if (robot <= .33) {
+  robot = "Rock";
+} else if (robot <= .667) {
+  robot = "Paper"; 
+} else if (Math.random() < 1) {
+  robot = "Scissors";
+}
+
 
 function game(user, computer){
   if (user === computer) {
     return "Tie";
-  } else if (user === "Rock" && computer ==== Paper) {
-    return "You Win"
+  } else if (user === "Rock" && computer === "Scissors") {
+    return "I win";
+  } else if (user === "Scissors" && computer === "Paper") {
+    return "I Win";
+  } else if (user === "Paper" && computer === "Rock") {
+    return "I Win";
+  } else if (user === "Rock" && computer === "Paper") {
+    return "I Lose";
+  } else if (user === "Paper" && computer === "Scissors") {
+    return "I Lose";
+  } else if (user === "Scissors" && computer === "Rock") {
+    return "I Lose";
   }
 }
 
-
+console.log(game("Rock", robot));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -251,9 +268,6 @@ console.log(annoyingSong(20));
 for (let i = 10; i > 0; i--){
   console.log(annoyingSong(i));  
   }
-
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
