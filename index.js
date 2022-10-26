@@ -184,32 +184,32 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 let robot = Math.random();
 
 if (robot <= .33) {
-  robot = "Rock";
+  robot = "rock";
 } else if (robot <= .667) {
-  robot = "Paper"; 
+  robot = "paper"; 
 } else if (Math.random() < 1) {
-  robot = "Scissors";
+  robot = "scissors";
 }
 
 function game(user, computer){
   if (user === computer) {
     return "it's a tie";
-  } else if (user === "Rock" && computer === "Scissors") {
+  } else if (user === "rock" && computer === "scissors") {
     return "you win!";
-  } else if (user === "Scissors" && computer === "Paper") {
+  } else if (user === "scissors" && computer === "paper") {
     return "you win!";
-  } else if (user === "Paper" && computer === "Rock") {
+  } else if (user === "paper" && computer === "rock") {
     return "you win!";
-  } else if (user === "Rock" && computer === "Paper") {
+  } else if (user === "rock" && computer === "paper") {
     return "you lose!";
-  } else if (user === "Paper" && computer === "Scissors") {
+  } else if (user === "paper" && computer === "scissors") {
     return "you lose!";
-  } else if (user === "Scissors" && computer === "Rock") {
+  } else if (user === "scissors" && computer === "rock") {
     return "you lose!";
   }
 }
 
-console.log(game("Rock", robot));
+console.log(game("rock", robot));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
