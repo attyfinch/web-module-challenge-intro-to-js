@@ -87,10 +87,10 @@ Do the following:
 */
 
 function dogYears(age){
-  console.log(age * 7);
+  return age * 7;
 }
 
-dogYears(40);
+console.log(dogYears(40));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -148,17 +148,16 @@ function hungryDog(ageYears, weightPounds){
       return .04 * weightPounds;
    } else if (ageYears >= 1 && weightPounds > 15) {
       return .02 * weightPounds;
-   }  else if (ageYears >= 1 && weightPounds >= 10.5) {
+   }  else if (ageYears >= 1 && weightPounds >= 11) {
       return .03 * weightPounds;
-   } else if (ageYears >= 1 && weightPounds >= 5.5) {
+   } else if (ageYears >= 1 && weightPounds >= 6) {
       return .04 * weightPounds;
-   }  else if (ageYears >= 1 && weightPounds <= 5.4) {
-      return .05 * weightPounds;
+   }  else if (ageYears >= 1 && weightPounds <= 5) {
+      return (.05 * weightPounds);
    } 
   }
 
-console.log(hungryDog(1, 15));
-
+console.log(hungryDog(1, 4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -192,22 +191,21 @@ if (robot <= .33) {
   robot = "Scissors";
 }
 
-
 function game(user, computer){
   if (user === computer) {
-    return "Tie";
+    return "it's a tie";
   } else if (user === "Rock" && computer === "Scissors") {
-    return "I win";
+    return "you win!";
   } else if (user === "Scissors" && computer === "Paper") {
-    return "I Win";
+    return "you win!";
   } else if (user === "Paper" && computer === "Rock") {
-    return "I Win";
+    return "you win!";
   } else if (user === "Rock" && computer === "Paper") {
-    return "I Lose";
+    return "you lose!";
   } else if (user === "Paper" && computer === "Scissors") {
-    return "I Lose";
+    return "you lose!";
   } else if (user === "Scissors" && computer === "Rock") {
-    return "I Lose";
+    return "you lose!";
   }
 }
 
@@ -240,7 +238,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  return cm * 30.48;
+  return cm / 30.48;
 }
 
 console.log(feet(100));
@@ -260,7 +258,7 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(numBottles){
-  return numBottles + " bottles of soda on the wall, " + numBottles + " bottles of soda, take one down pass it around " + numBottles + " bottles of soda on the wall";
+  return numBottles + " bottles of soda on the wall, " + numBottles + " bottles of soda, take one down pass it around " + (numBottles - 1) + " bottles of soda on the wall";
 }
 
 console.log(annoyingSong(20));
